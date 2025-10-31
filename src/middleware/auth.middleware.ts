@@ -22,11 +22,17 @@ export const authMiddleware = async (
 
   var authenticatedUser = await prisma.user.findUnique({
     where: { id: decodedjwtPayload.id },
-    select: { id: true },
+    select: { id: true, isBlocked: true },
   })
 
   if (!authenticatedUser) {
     return res.status(401).json({ message: '401: Anauthorized' })
+  }
+
+  if (authenticatedUser.isBlocked) {
+    return res
+      .status(403)
+      .json({ message: '403: Forbidden; You have been blocked' })
   }
 
   req.headers.currentUserId = authenticatedUser.id.toString()
