@@ -7,3 +7,4 @@ export const userRouter = Router()
 userRouter.use(authMiddleware)
 
 userRouter.get('/self', userController.getSelf)
+userRouter.get('/self/block', userController.blockSelf)
