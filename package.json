@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Test task for EffectiveMobile",
   "main": "server.ts",
-  "author": "cofeek-codes",
+  "author": "Egor Kormyshev (cofeek-codes)",
   "license": "MIT",
   "private": true,
   "dependencies": {
