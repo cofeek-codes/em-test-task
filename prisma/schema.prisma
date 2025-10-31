@@ -15,12 +15,13 @@ datasource db {
 }
 
 model User {
-  id       Int        @id @default(autoincrement())
-  fullName String
-  email    String     @unique
-  password String
-  role     UserRole   @default(USER)
-  status   UserStatus @default(ACTIVE)
+  id        Int        @id @default(autoincrement())
+  fullName  String
+  email     String     @unique
+  password  String
+  role      UserRole   @default(USER)
+  status    UserStatus @default(ACTIVE)
+  isBlocked Boolean    @default(false)
 }
 
 enum UserRole {
