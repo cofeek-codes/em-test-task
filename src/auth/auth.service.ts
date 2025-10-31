@@ -5,7 +5,6 @@ import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import serverConfig from '../configs/server.config'
 import { LoginDTO } from './dto/login.dto'
-import { INSPECT_MAX_BYTES } from 'buffer'
 
 const prisma = new PrismaClient()
 

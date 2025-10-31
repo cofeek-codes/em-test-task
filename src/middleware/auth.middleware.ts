@@ -1,5 +1,3 @@
-// src/middleware/auth.ts
-
 import jwt, { JwtPayload } from 'jsonwebtoken'
 import { PrismaClient } from '../generated/prisma/client'
 import { NextFunction, Request, Response } from 'express'
