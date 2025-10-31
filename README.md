@@ -16,5 +16,5 @@
 1. Склонировать репозиторий: `git clone https://github.com/cofeek-codes/em-test-task`
 2. Установить зависимости: `yarn` (эта команда также создаст файл `.env` из `.env.example`)
 3. Выполнить миграции: `npx prisma migrate dev`
-<!-- 4. Выполнить сидеры:  -->
-4. Запустить в prod-среде: `yarn build && yarn start` (или dev-среде: `yarn dev`)
+4. Выполнить сидеры (если не были автоматически выполнены после миграции): `npx prisma db seed`
+5. Запустить в prod-среде: `yarn build && yarn start` (или dev-среде: `yarn dev`)
