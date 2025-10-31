@@ -1,7 +1,7 @@
 import express from 'express'
 import serverConfig from './configs/server.config'
-import { userRouter } from './user/user.controller'
-import { authRouter } from './auth/auth.controller'
+import { userRouter } from './user/user.router'
+import { authRouter } from './auth/auth.router'
 
 const app = express()
 
