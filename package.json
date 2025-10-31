@@ -7,6 +7,8 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "@prisma/client": "^6.18.0",
+    "bcrypt": "^6.0.0",
     "dotenv": "^17.2.3",
     "express": "^5.1.0"
   },
@@ -25,7 +27,7 @@
     "postinstall": "copy-env-cli",
     "build": "tsc",
     "start": "node dist/server.js",
-    "dev": "nodemon --watch 'src/**/*.ts' --exec ts-node src/server.ts",
+    "dev": "nodemon --exec ts-node src/server.ts",
     "prepare": "husky"
   }
 }
