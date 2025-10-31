@@ -4,3 +4,4 @@ import authService from './auth.service'
 export const authRouter = Router()
 
 authRouter.post('/register', authService.register)
+authRouter.post('/login', authService.login)
