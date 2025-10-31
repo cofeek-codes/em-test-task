@@ -3,8 +3,8 @@ import { Request, Response } from 'express'
 
 const prisma = new PrismaClient()
 
-const getById = async (req: Request, res: Response) => {
-  const id = Number(req.params.id)
+const getSelf = async (req: Request, res: Response) => {
+  const id = 1
   const user = await prisma.user.findFirst({
     where: { id },
     omit: { password: true },
@@ -17,6 +17,6 @@ const getById = async (req: Request, res: Response) => {
   return res.json(user)
 }
 
-const userController = { getById }
+const userController = { getSelf }
 
 export default userController

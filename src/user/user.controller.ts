@@ -3,4 +3,4 @@ import userController from './user.service'
 
 export const userRouter = Router()
 
-userRouter.get('/:id', userController.getById)
+userRouter.get('/:id', userController.getSelf)
