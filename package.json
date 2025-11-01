@@ -27,8 +27,8 @@
   },
   "scripts": {
     "postinstall": "copy-env-cli",
-    "build": "tsc",
-    "start": "node dist/server.js",
+    "build": "tsc && cp prisma/dev.db dist/prisma/dev.db",
+    "start": "node dist/src/server.js",
     "dev": "nodemon --exec ts-node src/server.ts",
     "prepare": "husky"
   }
